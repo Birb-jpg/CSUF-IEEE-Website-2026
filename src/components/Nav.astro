@@ -1,0 +1,82 @@
+---
+import "../styles/global.css"
+import Button from '../components/button.astro';
+import IEEELogo from "../assets/IEEE-logo-black.svg"
+---
+<nav id="nav" class="full">
+    <section id="nav-container" class="flex flex-row flex-between full">
+        <ul class="nav-ul flex flex-center">
+            
+            <li class="nav-li flex item-center flex-center">
+                <Button href="#" variant="nav">Home</Button>
+            </li>
+            <li class="nav-li flex item-center flex-center">
+                <Button href="#" variant="nav">Events</Button>
+            </li>
+            
+            <!-- <li class="nav-li flex item-center flex-center"><a href="/">Home</a></li>
+            <li class="nav-li flex item-center flex-center"><a href="/events">Events</a></li>
+            <li class="nav-li flex item-center flex-center"><a href="/memberships">Memberships</a></li>
+            <li class="nav-li flex item-center flex-center"><a href="/about">About</a></li> -->
+        </ul>
+        <ul id="center-btns" class="nav-ul flex flex-center">
+            <li id="logo" class="flex flex-center">
+                <img id="IEEE-svg" src={IEEELogo.src} alt="IEEE Logo">
+            </li>
+        </ul>
+        <ul id="aside-btns" class="nav-ul flex flex-center">
+            <li class="nav-li flex item-center flex-center">
+                <Button href="#" variant="nav">Memberships</Button>
+            </li>
+            <li class="nav-li flex item-center flex-center">
+                <Button href="#" variant="nav">About</Button>
+            </li>
+        </ul>
+        
+    </section>
+</nav>
+
+<style>
+    #nav-container > ul {
+        flex: 1;
+    }
+    #nav{
+        position: fixed;
+        height: 4.5rem;
+        
+    }
+    #nav-container{
+        height: 100%;
+    }
+    .nav-ul {
+        list-style: none;
+        height: 100%;
+
+    }
+    .nav-li {
+        /* padding: 0 0.75rem; */
+        height: 100%;
+        font-size: 1rem;
+    }
+  
+
+    .nav-li:hover a {
+        color: var(--color-primary);
+    }
+    #logo{
+        height: 100%;
+        /* background-color: var(--color-primary); */
+        width: 5rem;
+    }
+    #logo img{
+        padding: .5rem;
+        object-fit: cover;
+        height: 100%;
+    }
+    #nav-ul, #aside-btns{
+        flex: 1 0 0;
+    }
+    #center-btns{
+        flex: 0 1 auto
+    }
+</style>

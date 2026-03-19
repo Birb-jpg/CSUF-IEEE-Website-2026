@@ -1,0 +1,59 @@
+---
+import Global from '../layouts/global.astro';
+import Button from '../components/button.astro';
+
+import test from "../assets/IEEE-logo-black.svg"
+
+import "../styles/global.css"
+---
+
+<Global>
+	<header class="flex flex-center flex-row items-center full">
+		<!-- <section id="header-container-left" class="flex flex-center flex-col">
+
+		</section> -->
+		<section id="header-container-center" class="flex flex-center flex-col">
+			<h1 id="hero-text" class="flex">CSU FRESNO IEEE</h1>
+			<p id="hero-text-sub"><em>Empowering the next generation of engineers</em></p>
+			<section id="cta-container" class="flex flex-row flex-center">
+				<Button href="/membership">Become a Member</Button>
+				<Button href="#events" variant='secondary'>View Events</Button>
+			</section>
+		</section>
+		<!-- <section id="header-container-right" class="flex flex-center flex-col">
+
+		</section> -->
+		
+	</header>
+	<section id="about">
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore nulla autem molestiae! Repellat, quas ut dolor laborum quaerat enim, voluptatibus exercitationem alias neque dolore blanditiis asperiores distinctio, veritatis sit excepturi.</p>
+	</section>
+	<section id="events">
+		
+	</section>
+	<section id="contacts">
+		
+	</section>
+	<section id="projects">
+		
+	</section>
+</Global>
+
+<style>
+	#hero-text{
+		font-weight: 1000;
+		font-size: 4.5rem;
+		text-align: center;
+	}
+	#hero-text-sub{
+		text-align: center;
+	}
+	header{
+		height: 100vh;
+	}
+	#cta-container{
+		height: 25vh;
+		gap: .5rem;
+	}
+	
+</style>

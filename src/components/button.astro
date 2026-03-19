@@ -1,0 +1,72 @@
+---
+interface Props {
+    href: string;
+    variant?: "primary" | "secondary" | "ghost" | "nav";
+    target?: "_blank" | "_self";
+}
+
+const { href, variant = "primary", target = "_self" } = Astro.props;
+import "../styles/global.css";
+---
+
+<a
+    href={href}
+    target={target}
+    class={`inline-flex items-center btn btn-${variant}`}
+>
+    <slot />
+</a>
+
+<style>
+    .btn {
+        gap: 0.5rem;
+        padding: 0.75rem 1.75rem;
+        border-radius: var(--radius);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        transition:
+            opacity 0.2s,
+            filter 0.2s,
+            transform 0.5s;
+    }
+
+    .btn:hover {
+        opacity: 0.85;
+        filter: drop-shadow(1);
+        transform: translateY(-0.08rem);
+    }
+    .btn-primary {
+        background: var(--color-primary);
+        color: #fff;
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--color-primary);
+        border: 0.095rem solid var(--color-primary);
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: inherit;
+    }
+
+    .btn-ghost:hover {
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    .btn-nav {
+        background: transparent;
+        color: inherit;
+        transition: color, 0.3s;
+        font-size: inherit;
+    }
+    .btn-nav:hover {
+        opacity: inherit;
+        transform: none;
+        color: var(--color-primary);
+    }
+</style>
