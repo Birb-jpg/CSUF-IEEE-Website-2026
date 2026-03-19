@@ -2,13 +2,13 @@
 
 This is the official website for the IEEE Fresno State Student Branch, built with Astro. The site showcases our activities, events, and resources for students interested in electrical and electronics engineering.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: [Astro](https://astro.build/) - A modern web framework for building fast, content-focused websites.
 - **Styling**: CSS with global styles.
 - **Components**: Astro components for reusable UI elements.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 /
@@ -31,7 +31,7 @@ This is the official website for the IEEE Fresno State Student Branch, built wit
 └── README.md
 ```
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -71,7 +71,7 @@ Preview the production build:
 npm run preview
 ```
 
-## 📝 Commands
+## Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -82,13 +82,12 @@ npm run preview
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 📞 Contact
+## Contact
 
 For questions or inquiries, contact the IEEE Fresno State Student Branch officers:
 
-- Email: ieee@fresnostate.edu
-- Website: [IEEE Fresno State](https://www.ieee.org/)
+fixme!
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
