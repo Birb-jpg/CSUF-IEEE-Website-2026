@@ -1,7 +1,7 @@
 ---
 import Global from "../layouts/global.astro";
 import Button from "../components/button.astro";
-
+import Card from "../components/card.astro";
 import "../styles/global.css";
 ---
 
@@ -29,6 +29,17 @@ import "../styles/global.css";
 			<h2>About IEEE Fresno State</h2>
 			<hr />
 			<section id="about-content" class="flex flex-col flex-around">
+				<section class="flex flex-row flex-center">
+					<Card heading="Something" subText="Info" buttonText="Register" variant="primary">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque doloremque quasi quaerat quo est, eveniet fuga molestias, libero labore nam sed animi beatae, modi exercitationem soluta odio cum maiores quod.
+				</Card>
+				<Card heading="Something" subText="Info" buttonText="Register" variant="primary">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque doloremque quasi quaerat quo est, eveniet fuga molestias, libero labore nam sed animi beatae, modi exercitationem soluta odio cum maiores quod.
+				</Card>
+				<Card heading="Something" subText="Info" buttonText="Register" variant="primary">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque doloremque quasi quaerat quo est, eveniet fuga molestias, libero labore nam sed animi beatae, modi exercitationem soluta odio cum maiores quod.
+				</Card>
+				</section>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Ipsa placeat porro facilis error incidunt, vero ducimus
@@ -38,14 +49,32 @@ import "../styles/global.css";
 			</section>
 		</section>
 		<section id="events">
-			<h2>Events</h2>
+			<h2>Upcoming Events</h2>
 			<hr />
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-				voluptates hic. Totam, hic consectetur minus alias at cum ad ab
-				neque? Aperiam officia eligendi in et quaerat blanditiis ipsa
-				ut?
-			</p>
+			<section id="event-split" class="flex flex-center">
+			<section class="event-col flex flex-center flex-col flex-1">
+				<Card heading="3/20" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque doloremque quasi quaerat quo est, eveniet fuga molestias, libero labore nam sed animi beatae, modi exercitationem soluta odio cum maiores quod.
+				</Card>
+				<Card heading="3/27" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis cum deleniti ducimus deserunt quidem, sapiente modi similique asperiores excepturi, accusamus blanditiis officiis voluptas! Iusto consequuntur nemo deserunt natus aliquam. Cupiditate?
+				</Card>
+				<Card heading="4/9" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos error laborum dolore non impedit porro dolores eligendi adipisci, iusto atque tempora? Veritatis voluptatum distinctio esse ab facere officia aliquid corrupti?
+				</Card>
+			</section>
+			<section class="event-col flex flex-center flex-col flex-1">
+				<Card heading="3/20" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque doloremque quasi quaerat quo est, eveniet fuga molestias, libero labore nam sed animi beatae, modi exercitationem soluta odio cum maiores quod.
+				</Card>
+				<Card heading="3/27" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis cum deleniti ducimus deserunt quidem, sapiente modi similique asperiores excepturi, accusamus blanditiis officiis voluptas! Iusto consequuntur nemo deserunt natus aliquam. Cupiditate?
+				</Card>
+				<Card heading="4/9" subText="Important Event" buttonText="Register" variant="event">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos error laborum dolore non impedit porro dolores eligendi adipisci, iusto atque tempora? Veritatis voluptatum distinctio esse ab facere officia aliquid corrupti?
+				</Card>
+			</section>
+			</section>
 		</section>
 		<section id="contacts">
 			<h2>Contacts</h2>
@@ -98,8 +127,11 @@ import "../styles/global.css";
 	#content-container > section {
 		padding-bottom: 2rem;
 	}
-	hr {
-		margin: 0.5rem 0;
-		border: 0.1rem solid black;
+	.event-col{
+		gap: 1.5rem;
 	}
+	#event-split{
+		gap: 1.5rem;
+	}
+	
 </style>

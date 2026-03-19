@@ -71,3 +71,8 @@ body{
 .quarter { width: 25%; }
 .three-quarters { width: 75%; }
 .fit { width: fit-content; }
+
+hr {
+    margin: 0.5rem 0;
+    border: 0.1rem solid black;
+}

@@ -1,0 +1,93 @@
+---
+interface Props {
+    heading : string;
+    buttonText : string;
+    subText? : string;
+    href?: string;
+    variant?: "primary" | "button" | "event";
+}
+
+const { heading = "Card", variant = "primary", buttonText = "Button",href ="#", subText=""} = Astro.props;
+
+import Button from "../components/button.astro"
+
+import "../styles/global.css";
+
+---
+
+<section class={"card flex flex-1 "+"card-"+variant}>
+    <section class="card-container flex items-start flex-col justify-center flex-1">
+        <h2>{heading}</h2>
+        <hr class="full">
+        <section id="content" class="flex flex-col flex-1">
+            <h3 class="flex">{subText}</h3>
+            <p>
+                <slot/>
+            </p>
+        </section>
+        <section id="card-btns" class="card-btns flex justify-end">
+            <Button href={href}>{buttonText}</Button>
+        </section>
+    </section>
+</section>
+
+<style>
+    .card-container > hr{
+        margin: 0 0 1rem 0;
+        border: .1rem dashed var(--color-primary);
+
+    }
+
+    .card-button #card-btns{
+        padding-bottom: 1rem;
+        display: flex;
+
+    }
+
+    .card-event #card-btns{
+        
+        padding-bottom: 1rem;
+        display: flex;
+
+    }
+    .card-event #card-btns{
+        width: fit-content;
+    }
+    
+    
+    .card-event > .card-container > hr{
+        width: 0px;
+        padding: 0;
+        height: 100%;
+        margin: 0 1rem 0 1rem;
+
+    }
+    .card-event > .card-container{
+        flex-direction: row;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .card-event > .card-container > *{
+        padding: 1rem 0 1rem 0;
+    }
+    .card-container > p{
+        padding-bottom: 1rem;
+    }
+    .card-container{
+        background: transparent;
+        /* color: var(--color-primary); */
+        border: 0.095rem solid var(--color-primary);
+        border-radius: var(--radius);
+    }
+    .card-container > .card-btns{
+        display:none;
+    }
+    .card-container > *{
+        padding: 0 1rem 0 1rem;
+    }
+    .card-container > h2{
+        padding-top: 1rem;
+        text-align: center;
+        width: 5rem;
+    }
+</style>
