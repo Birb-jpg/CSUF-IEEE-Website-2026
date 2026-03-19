@@ -1,10 +1,8 @@
 ---
-import Global from '../layouts/global.astro';
-import Button from '../components/button.astro';
+import Global from "../layouts/global.astro";
+import Button from "../components/button.astro";
 
-import test from "../assets/IEEE-logo-black.svg"
-
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <Global>
@@ -14,46 +12,94 @@ import "../styles/global.css"
 		</section> -->
 		<section id="header-container-center" class="flex flex-center flex-col">
 			<h1 id="hero-text" class="flex">CSU FRESNO IEEE</h1>
-			<p id="hero-text-sub"><em>Empowering the next generation of engineers</em></p>
+			<p id="hero-text-sub">
+				<em>Empowering the next generation of engineers</em>
+			</p>
 			<section id="cta-container" class="flex flex-row flex-center">
 				<Button href="/membership">Become a Member</Button>
-				<Button href="#events" variant='secondary'>View Events</Button>
+				<Button href="#events" variant="secondary">View Events</Button>
 			</section>
 		</section>
 		<!-- <section id="header-container-right" class="flex flex-center flex-col">
 
 		</section> -->
-		
 	</header>
-	<section id="about">
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore nulla autem molestiae! Repellat, quas ut dolor laborum quaerat enim, voluptatibus exercitationem alias neque dolore blanditiis asperiores distinctio, veritatis sit excepturi.</p>
-	</section>
-	<section id="events">
-		
-	</section>
-	<section id="contacts">
-		
-	</section>
-	<section id="projects">
-		
+	<section id="content-container">
+		<section id="about-container" class="flex flex-col">
+			<h2>About IEEE Fresno State</h2>
+			<hr />
+			<section id="about-content" class="flex flex-col flex-around">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Ipsa placeat porro facilis error incidunt, vero ducimus
+					mollitia impedit illo cumque, et possimus dolor hic magnam
+					nihil praesentium assumenda fuga adipisci!
+				</p>
+			</section>
+		</section>
+		<section id="events">
+			<h2>Events</h2>
+			<hr />
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+				voluptates hic. Totam, hic consectetur minus alias at cum ad ab
+				neque? Aperiam officia eligendi in et quaerat blanditiis ipsa
+				ut?
+			</p>
+		</section>
+		<section id="contacts">
+			<h2>Contacts</h2>
+			<hr />
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+				iusto, aperiam, quidem aspernatur ipsa reiciendis cupiditate
+				optio atque corporis repellendus fugiat dicta enim, dolore nulla
+				commodi tempora dolor soluta exercitationem!
+			</p>
+		</section>
+		<section id="projects">
+			<h2>Featured Projects</h2>
+			<hr />
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Excepturi obcaecati alias sequi, voluptatem ullam rem quo nam
+				ipsam reiciendis autem illum quisquam enim necessitatibus
+				incidunt iusto, saepe sint voluptas vel?
+			</p>
+		</section>
 	</section>
 </Global>
 
 <style>
-	#hero-text{
+	body {
+		height: 500vh;
+	}
+	#hero-text {
 		font-weight: 1000;
 		font-size: 4.5rem;
 		text-align: center;
 	}
-	#hero-text-sub{
+	#hero-text-sub {
 		text-align: center;
 	}
-	header{
+	header {
 		height: 100vh;
 	}
-	#cta-container{
+	#cta-container {
 		height: 25vh;
-		gap: .5rem;
+		gap: 0.5rem;
 	}
-	
+	#about-content {
+		gap: 2.5rem;
+	}
+	#about-content p {
+		/* text-align: justify; */
+	}
+	#content-container > section {
+		padding-bottom: 2rem;
+	}
+	hr {
+		margin: 0.5rem 0;
+		border: 0.1rem solid black;
+	}
 </style>
