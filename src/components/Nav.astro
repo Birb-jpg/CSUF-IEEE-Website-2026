@@ -2,6 +2,7 @@
 import "../styles/global.css"
 import Button from '../components/button.astro';
 import IEEELogo from "../assets/IEEE-logo-black.svg"
+
 ---
 <nav id="nav" class="full">
     <section id="nav-container" class="flex flex-row flex-between full">
@@ -41,7 +42,12 @@ import IEEELogo from "../assets/IEEE-logo-black.svg"
     #nav{
         position: fixed;
         height: 4.5rem;
-        
+        top: 0;
+        left: 0;
+        transition: transform 0.2s ease;
+    }
+    #nav.hidden {
+        transform: translateY(-100%);
     }
     #nav-container{
         height: 100%;
@@ -72,3 +78,22 @@ import IEEELogo from "../assets/IEEE-logo-black.svg"
         height: 100%;
     }
 </style>
+
+<script>
+    window.addEventListener("DOMContentLoaded",()=>{
+        const nav = document.getElementById("nav");
+        if(nav == null) return;
+        let lastScroll = 0;
+        window.addEventListener("scroll", () => {
+            const current = window.scrollY;
+            if (current > lastScroll && current > 80) {
+                nav.classList.add("hidden");
+            } else {
+                nav.classList.remove("hidden");
+            }
+
+            lastScroll = current;
+        });
+    })
+    
+</script>
