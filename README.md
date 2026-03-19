@@ -5,6 +5,7 @@ This is the official website for the IEEE Fresno State Student Branch, built wit
 ## Tech Stack
 
 - **Framework**: [Astro](https://astro.build/) - A modern web framework for building fast, content-focused websites.
+- **Content Managment Service**: [Decap CMS](https://decapcms.org/) - Open source content management for static sites.
 - **Styling**: CSS with global styles.
 - **Components**: Astro components for reusable UI elements.
 
