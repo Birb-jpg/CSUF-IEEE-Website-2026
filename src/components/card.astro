@@ -24,29 +24,32 @@ import "../styles/global.css";
             <p>
                 <slot/>
             </p>
+            <section id="card-btns" class="card-btns flex justify-end">
+                <Button href={href}>{buttonText}</Button>
+            </section>
         </section>
-        <section id="card-btns" class="card-btns flex justify-end">
-            <Button href={href}>{buttonText}</Button>
-        </section>
+        
     </section>
 </section>
 
 <style>
     .card-container > hr{
-        margin: 0 0 1rem 0;
+        margin: 0 0 0 0;
         border: .1rem dashed var(--color-primary);
 
     }
-
+    .card #card-btns{
+        display: none;
+    }
     .card-button #card-btns{
-        padding-bottom: 1rem;
+        
         display: flex;
 
     }
 
     .card-event #card-btns{
         
-        padding-bottom: 1rem;
+        padding-top: 1rem;
         display: flex;
 
     }
@@ -65,28 +68,33 @@ import "../styles/global.css";
     .card-event > .card-container{
         flex-direction: row;
         align-items: center;
-        padding: 0 1rem;
     }
     .card-event > .card-container > *{
-        padding: 1rem 0 1rem 0;
+
     }
     .card-container > p{
-        padding-bottom: 1rem;
+
+    }
+    #content{
+        padding: 1rem;
     }
     .card-container{
         background: transparent;
         /* color: var(--color-primary); */
         border: 0.095rem solid var(--color-primary);
         border-radius: var(--radius);
+        /* padding: 1rem; */
     }
     .card-container > .card-btns{
         display:none;
     }
     .card-container > *{
-        padding: 0 1rem 0 1rem;
     }
     .card-container > h2{
-        padding-top: 1rem;
+        padding: 1rem 0 1rem 1rem;
+        text-align: center;
+    }
+    .card-event > .card-container > h2{
         text-align: center;
         width: 5rem;
     }
